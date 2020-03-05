@@ -1,0 +1,117 @@
+/* Layout container limits and responsive breakpoints */
+@layout-width-phone: 280px;
+@layout-width-tablet: 708px;
+@layout-width-desktop: 970px;
+
+@highdensity: 		~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+					~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+					~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+					~"only screen and (min-device-pixel-ratio: 1.5)";
+@xsmall:			~"only screen and (max-width: 320px)";
+@between: ~"only screen and (min-width:320px) and (max-width:435px)";
+@small:				~"only screen and (max-width: 520px)";
+@small-phone:  ~"only screen and (min-width:520px) and (max-width:767px)";
+@phone:				~"only screen and (max-width: 767px)";
+@tablet-and-below:  ~"only screen and (max-width: 991px)";
+@tablet:			~"only screen and (min-width: 768px) and (max-width: 991px)";
+@tablet-and-above:  ~"only screen and (min-width: 768px)";
+@between-tablet-and-desktop: ~"only screen and (min-width:992px) and (max-width:1200px)";
+@large-and-below:   ~"only screen and (max-width: 1179px)";
+@large:			    ~"only screen and (min-width: 1180px)";
+@xtra-large: ~"only screen and (min-width:2000px)";
+@iu-media: ~"only screen and (max-width:1024px)";
+@iu-media-large: ~"only screen and (min-width:1025px)";
+
+//ignore everything on top
+@xsmall: ~"only screen and (max-width:576px)";
+@small: ~"only screen and (min-width:576px)";
+@medium: ~"only screen and (max-width:768px)";
+@desktop:~"only screen and (max-width: 992px)";
+@desktop-video:~"only screen and (max-width:1024px)";
+
+@video:~"only screen and (min-width:1025px)";
+@xtra: ~"only screen and (min-width: 992px)";
+@xtraL: ~"only screen and (min-width:1200px)";
+
+// IU MEDIA LIBRARY USE!!!
+@iu-phone: ~"only screen and (max-width:399px)";
+@iu-sm: ~"only screen and (min-width:350px)";
+@iu-max-sm: ~"only screen and (max-width:739px)";
+@iu-md: ~"only screen and (min-width:740px)";
+@iu-lg:~"only screen and (min-width:1024px)";
+@iu-xl:~"only screen and (min-width:1260px)";
+@iu-xxl:~"only screen and (min-width:1400px)";
+@iu-between: ~"only screen and (max-width:630px)";
+@iu-break: ~"only screen and (max-width:1079px)";
+@iu-break-lg: ~"only screen and (min-width:1080px)";
+@iu-lg-max: ~"only screen and (max-width:1023px)";
+
+html{
+	overflow-x: hidden;
+}
+
+.rvt-container--freshman{
+	width:100%;
+}
+
+.rvt-container--sophomore{
+	width:100%;
+}
+.rvt-container--junior{
+	width:100%;
+}
+.rvt-container--senior{
+	width:100%;
+}
+
+@media @iu-max-sm{
+.logged-in{
+	.opened{
+	  margin: 0 auto;
+	  background: #006298;
+	  position: absolute;
+	  top: 96px !important;
+	  left: 0;
+	  right: 0;
+	  z-index: 999 !important;
+	}
+  }
+}
+
+@media @iu-lg-max{
+	.logged-in{
+		.opened{
+		  margin: 0 auto;
+		  background: #006298;
+		  position: absolute;
+		  top: 82px !important;
+		  left: 0;
+		  right: 0;
+		  z-index: 999 !important;
+		}
+	  }
+	}
+
+	@media only screen and(max-width: 790px){
+		.logged-in{
+			.opened{
+			  margin: 0 auto;
+			  background: #006298;
+			  position: absolute;
+			  top: 96px !important;
+			  left: 0;
+			  right: 0;
+			  z-index: 999 !important;
+			}
+		  }
+	}
+
+	.rvt-header__main-nav ul li button[aria-current]::after {
+		content: ' ';
+		position: absolute;
+		background-color: #000 !important;
+		height: 0.25rem;
+		width: 100%;
+		top: 2.75rem;
+		left: 0;
+	  }

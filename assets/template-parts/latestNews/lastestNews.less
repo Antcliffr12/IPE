@@ -1,0 +1,141 @@
+.latestNews{
+    padding-top:48px;
+    .row{
+        // margin-left:0px;
+        // margin-right:0px;
+    }
+
+    @media @iu-sm{
+        .latestNewsWrap{
+            .col-md-6{
+                // padding:0px;
+                display: flex;
+            }
+            .title-wrap-line{
+                border-top: 3px solid #888994;
+                padding-top: 30px;
+                padding-bottom:30px;
+                h2{
+                    text-transform: uppercase;
+                    letter-spacing: 0.04em;
+                    margin-bottom: 0;
+                    font-size: 24px;
+                    display: inline-block;
+                    font-weight: 700;
+                }
+            }
+
+            article{
+                box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+                border: none;
+                margin-bottom:30px;
+                border-radius: 5px;
+                width:100%;
+                .card_holder{
+                    flex:1;
+                    a{
+                        color:#171821;
+                        height:100%;
+                        display: flex;
+                        flex-direction: column;
+                        .image-wrap{
+                            position: relative;
+                            background-color: #f7f7f7;
+                            position: relative;
+                            overflow: hidden;
+                            -webkit-transform: translateZ(0);
+                            transform: translateZ(0);
+                            padding-bottom: 70%;
+                            .card-img-top{
+                                border-top-left-radius: 5px;
+                                border-top-right-radius: 5px;
+                                height:auto;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                min-height: 100%;
+                                -webkit-backface-visibility: hidden;
+                                backface-visibility: hidden;
+                            }
+                        }
+                        .card-body{
+                            background:#edebeb;
+                            .card-text{
+                                font-size: 12px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                            }
+                        }
+                       &:active{
+                           outline:none;
+                           box-shadow: none;
+                       }
+                       &:focus{
+                           outline:none;
+                           box-shadow: none;
+                       }
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .button-wrap{
+        padding-bottom:40px;
+        button{
+            border: 1px solid #990000;
+            width: 200px;
+            height: 50px;
+            background: #990000;
+            color: #FFF;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 5px;
+
+            &:focus{
+               box-shadow: none;
+            }
+        }
+    }
+
+    .events{
+       
+        h2{
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0;
+            font-size: 24px;
+            display: inline-block;
+            font-weight: 700;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+      
+        
+    }
+
+   
+}
+
+
+// @media @iu-blogs{
+//     .rvt-container.rvt-container--senior.rvt-container--center.news{
+//         max-width:760px !important;
+//     }
+// }
+@media @iu-lg-max{
+    .rvt-container.rvt-container--senior.rvt-container--center.news{
+        max-width:768px !important;
+    }
+}
+
+@media @iu-max-sm{
+    .rvt-container.rvt-container--senior.rvt-container--center.news{
+        max-width:540px !important;
+    }
+}

@@ -1,0 +1,56 @@
+.multiboxes{
+  margin:80px 0;
+  .rvt-box{
+    border:none;
+    text-align: center;
+    .rvt-box__body{
+      h2{
+        font-size: 2rem;
+        color: black;
+        font-weight: bold;
+        margin-bottom: 0 !important;
+        padding-bottom: 20px;
+
+        &:after{
+          content: '';
+          display:block;
+          width:100px;
+          border: 2px solid #990000;
+          margin:0 auto;
+          margin-top:25px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        color: black;
+        margin-bottom: 33px !important;
+        line-height: 30px;
+      }
+
+    }
+
+    .btn{
+      background:#900;
+      border:1px solid #900;
+      &:active{
+        background:#900;
+      }
+      &:focus{
+        outline: none;
+        box-shadow:none;
+      }
+    }
+  }
+
+  @media @iu-max-sm{
+    margin:40px 0;
+    h2{
+      font-size:2rem !important;
+    }
+  }
+
+  
+
+ 
+}

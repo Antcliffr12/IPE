@@ -1,0 +1,130 @@
+#sidebar-nav {
+    position: relative;
+    nav{
+        height:100%;
+        
+    }
+
+    ul{
+        display:none;
+        padding:0;
+        margin:0 0 0 20px;
+        &:first-child > li:first-child { margin-top: 0; }
+    }
+    li{
+        list-style-type: none;
+        padding:0;
+        margin:5px 0 0 0;
+        position: static;
+        &.current-menu-item {
+			> a {
+				border-left: 5px solid #4A3C31;
+                //padding-left: 20px !important;
+                background-color: #ddd;
+                border-bottom: none;
+                padding: 10px 10px 10px 10px !important;
+               
+			}
+			> ul.sub-menu{
+				display:block;
+			}
+        }
+        &.current-menu-ancestor {
+			> ul.sub-menu{
+				display: block;
+			}
+		}
+    }
+
+    a{
+        display: block;
+        color:#000;
+        &:hover, &:focus{
+			text-decoration: none;
+		}
+    }
+
+    ul[data-menudepth="0"]{
+        display: block;
+        margin:0;
+        > li > a{
+            padding:10px 15px 10px 15px;
+            background:@iu-crimson;
+            color:#FFF;
+            font-size: 18px;
+            font-weight: 600;
+        }
+     
+    }
+
+    ul[data-menudepth="1"]{
+        font-size:16px;
+        margin:0;
+        > li > a{
+            padding:10px 15px 10px 15px;
+            background:#edebeb;
+        }
+    }
+
+    ul[data-menudepth="2"]{
+        font-size:14px;
+        li{
+                border-top: 1px solid #edebeb;
+            a{
+                padding:10px 15px 10px 15px;
+                background:#ffffff;
+            }
+            &:first-child{
+                border:none;
+            }
+        }
+        
+    }
+
+
+    @media @iu-lg-max{
+        margin-left:0px !important;
+        margin-bottom: 40px;      
+        &.collapse-mobile {
+            .menu-wrapper {
+                display: none;
+            }
+            .menu-toggle::after {
+                border-top: 5px solid #FFF;
+                border-bottom: none;
+            }
+        }
+
+        .menu-toggle {
+            cursor: pointer;
+            position: relative;
+            padding: 15px;
+            background: #006298;
+            margin-bottom: 5px;
+            font-size:18px;
+            color:#FFF;
+            &::after {
+                content: '';
+                width: 0px;
+                height: 0px;
+                border: 5px solid transparent;
+                border-top: none;
+                position: absolute;
+                top: 0;
+                right: 10px;
+                bottom: 0;
+                margin: auto;
+            }
+        }  
+    
+       
+    }
+
+    @media @iu-lg{
+        margin-left:60px;
+        .menu-toggle{
+            display:none;
+        }
+    }
+
+}

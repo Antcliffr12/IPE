@@ -1,0 +1,252 @@
+#blog-features{
+    .row{
+        margin-left:0px;
+        margin-right:0px;
+    }
+
+
+    .blog-features_main{
+        .card-featured{
+            border:none;
+            //margin: 12px; 
+            a{
+     
+                
+                &:focus{
+                    outline:none;
+                }
+                &:hover{
+                    text-decoration: none;
+                    transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+                    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+                    -ms-transform: scale(1.01); /* IE 9 */
+                    -webkit-transform: scale(1.01); /* Safari 3-8 */
+                    transform: scale(1.01); 
+                }
+                .card-body{
+                    background:#edebeb;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    h3{
+                        color:#000;
+                        line-height: 1.4167;
+                        font-weight: 500;
+                    }
+                    .card-text{
+                        color:#000;                   
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    
+
+                    }
+                }
+            } 
+                     
+        }
+        
+    }
+
+    .blog-features_side{
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+
+        .col{
+            flex-grow: 0;
+        }
+
+        .most-popular_blog{
+            //margin-top:10px;
+            border:none;
+            background:#edebeb;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            
+            
+            a{
+                .card-horizontal{
+                    display: flex;
+                    flex: 1 1 auto;
+                    .card-body{
+                        color:#000;
+                        .card-text{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    // .img-square-wrapper{
+                    //     img{
+                    //         width:auto;
+                    //         height:180px;
+                    //         border-top-right-radius: 5px;
+                    //         border-bottom-right-radius: 5px;
+                    //     }
+                    // }
+
+                }
+                &:hover{
+                    text-decoration: none;
+                    transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+                    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+                    -ms-transform: scale(1.01); /* IE 9 */
+                    -webkit-transform: scale(1.01); /* Safari 3-8 */
+                    transform: scale(1.01); 
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+
+             
+        }
+        
+    }
+
+    @media @iu-sm{
+        .card-featured{
+            padding-bottom: 40px;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+
+        .blog-features_side{
+            width:100%;
+            .most-popular_blog{
+                margin-bottom:40px;
+                
+                .card-horizontal{
+                    flex-direction: column-reverse;
+
+                    .img-square-wrapper{
+                        img{
+                            width:100%;
+                            height:auto;
+                         
+                        }
+                    }
+                }
+            }
+        }
+
+    }//iu sm 
+
+     @media @iu-md{
+         .blog-features_side{
+            .most-popular_blog{
+                .card-horizontal{
+                    flex-direction: row;
+                   .img-square-wrapper{
+                       img{
+                        height: 200px;
+                        width: auto;
+                       }
+                   }
+                }
+            }
+         }
+     }
+
+    @media @iu-lg{
+        .column{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex:  1;
+            padding:10px;
+            height:600px;
+        }
+
+      
+        .blog-features_main{
+            .card-featured{
+                padding-bottom: 0px;
+                flex-grow: 1;
+                a{
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+
+                
+                    .card-text{
+                        padding-top:40px;
+                    }
+                }
+            }           
+        }
+
+        .blog-features_side{
+            .most-popular_blog{
+                margin-bottom:0px;
+
+                .card-horizontal{
+                    .img-square-wrapper{
+                        img{
+                            width:auto;
+                            height:180px;
+                            border-top-right-radius: 5px;
+                            border-bottom-right-radius: 5px;
+                            max-width:250px;
+                        }
+                      }
+                    .card-body{
+                        padding:10px;
+                        .card-title{
+                            font-size:1.25rem;
+                            padding-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media @iu-xl{
+        .column{
+            height:600px;
+            
+        }
+
+        .blog-features_side{
+            .most-popular_blog{
+                .card-body{
+                    padding:1.25rem !important;
+                    .card-title{
+                        font-size:1.5rem;
+                    }
+                }
+            }
+        }
+       
+      
+    }// iu lg 
+    
+    @media @iu-lg-max{
+        .col{
+            padding:0px;
+        }
+    }
+    @media @desktop{
+        .col-lg-6{
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+     
+    }
+}
+
+.vertical{
+    max-height:400px;
+    object-fit: contain;
+    background:#990000;
+}
+
+.horizontal{
+    max-height:400px;
+}
+

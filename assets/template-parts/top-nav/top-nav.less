@@ -1,0 +1,209 @@
+#top-nav{
+    background:#900;
+    display:flex;
+    color:#FFF;
+    height:90px;
+
+    .rvt-container{
+      padding-left:0px;
+    }
+    .link-logo{    
+
+        &:focus{
+            outline: none;
+        }
+    }
+   
+
+      nav{
+        
+        ul{
+            li{
+            
+                a{
+                    color: #fff;
+                    font-size: 17px;
+                    font-weight: 600;
+                    position: relative;
+                    float: right;
+                    //padding: 8px 25px 10px 0;
+                    letter-spacing: .01em; 
+                    
+                    &:focus{
+                        outline: none;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    &:after{
+                      content:'';
+                      display: none;
+                    }
+                }
+
+              
+            }
+        }
+      }
+  
+      @media @iu-sm{
+        height:50px;
+        .logo{
+          height:50px;
+        } 
+
+        .Navbar__Link-toggle{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-left: auto;
+            font-size:30px;
+        }
+
+        nav{          
+            display:none;
+        }
+
+        .opened{
+            margin:0 auto;
+            background:#006298;
+            position: absolute;
+            top:50px;
+            left:0;
+            right:0;
+            z-index: 999 !important;
+
+            .drop-down{
+              position: relative;
+              &:after{
+                color: #FFF;
+                content: '\002B';
+                position: absolute;
+                right:50px;
+                z-index: 99 !important;
+                top: 20px;
+                font-size: 25px;
+                
+              }
+              &:only-child{
+                display:none;
+              }
+            }
+
+
+            
+           
+            li{
+                list-style: none;
+                padding: 25px 10px;
+                color: #FFF;
+                a{
+                    text-decoration: none;
+                    color: #FFF;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display:block;
+                  
+                }
+
+                &:hover{
+                    background-color:#01426A;
+                    
+                }
+               
+            
+            }
+
+            .active{
+               background:#01426A;
+            }
+        
+            .search-li{
+                display:none;
+            }
+
+            //top desktop search
+            .menu{
+                flex-direction: column;
+                width:100%;
+            }
+
+        
+
+            //mobile search
+            .mobile_search{
+                width:100%;
+                padding:20px;
+                justify-content: space-evenly;
+                display: flex;
+                align-items: center;
+                .mobile_search_wrap{
+                display: flex;       
+        
+                  .mobileSearch{
+                    width: 300px;
+                    border: 3px solid #EDEBEB;
+                    border-right: none;
+                    padding: 5px;
+                    height: 50px;
+                    border-radius: 5px 0 0 5px;
+                    outline: none;
+                    color: #000;
+                    background: #EDEBEB;
+                    color: #000 !important;
+                  }
+        
+                  .searchButton{
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid #EDEBEB;
+                    background: #01426A;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 0 5px 5px 0;
+                    cursor: pointer;
+                    font-size: 20px;
+                  }
+                }
+                &:hover{
+                  background-color:transparent;
+                }
+              }
+
+              //for now 
+              .sub-menu{
+                display:none;
+                
+              }
+
+        }
+        
+       
+      }
+
+      //end of small 
+      @media @iu-lg{   
+      
+        height:90px;
+        .logo{
+          height:90px;
+        }
+
+        .Navbar__Link-toggle{
+          display:none;
+        }
+
+        nav{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 0;
+        }
+      }
+      //end of large
+
+      
+
+}
+

@@ -1,0 +1,89 @@
+.single-news-story{
+    .row{
+        margin:0px;
+    }
+
+    .content-box{
+        border-radius: 5px;
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow:0 3px 2px rgba(0, 0, 0, 0.1);
+        padding:40px;
+        background-color:#edebeb;
+        .single_post_header{
+            margin-bottom: 24px;
+            h1{
+                font-size: 36px;
+                margin-top: 12px;
+                margin-bottom: 5px;
+            }
+
+            .entry_meta{
+                margin-top: 16px;
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;          
+
+                li{
+                    display: inline-block;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: #83858F;
+
+                }
+                .entry_meta-author{
+                    &:after{
+                        content: '-';
+                        display: inline-block;
+                        margin: 0 3px;
+                    }
+                }
+            }
+        }//single header
+        .entry_img_holder{
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+          
+            img{
+                width: 100%;
+                height:auto;
+            }
+        }
+
+        .entry_share{
+            padding-bottom:30px;
+        }
+
+        .social-follow-wrap{
+            ul{
+                list-style: none;
+                margin:0;
+                padding:0;
+                display: flex;
+                li{
+                    display: flex;
+                    a{
+                        width:150px;
+                    }
+                }
+            }
+        }
+
+        .entry_article{
+            a{
+                color:#7D110C;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+       
+    }
+
+}
+
+.img-helper{
+    width:100%;
+}
